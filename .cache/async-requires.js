@@ -1,0 +1,43 @@
+// prefer default export if available
+const preferDefault = m => m && m.default || m
+
+exports.components = {
+  "component---src-pages-404-js": () => import("../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
+  "component---src-pages-aviso-de-privacidad-js": () => import("../src/pages/aviso-de-privacidad.js" /* webpackChunkName: "component---src-pages-aviso-de-privacidad-js" */),
+  "component---src-pages-canales-de-venta-centros-de-servicio-js": () => import("../src/pages/canales-de-venta/centros-de-servicio.js" /* webpackChunkName: "component---src-pages-canales-de-venta-centros-de-servicio-js" */),
+  "component---src-pages-canales-de-venta-distribuidores-js": () => import("../src/pages/canales-de-venta/distribuidores.js" /* webpackChunkName: "component---src-pages-canales-de-venta-distribuidores-js" */),
+  "component---src-pages-canales-de-venta-index-js": () => import("../src/pages/canales-de-venta/index.js" /* webpackChunkName: "component---src-pages-canales-de-venta-index-js" */),
+  "component---src-pages-canales-de-venta-ser-distribuidor-js": () => import("../src/pages/canales-de-venta/ser-distribuidor.js" /* webpackChunkName: "component---src-pages-canales-de-venta-ser-distribuidor-js" */),
+  "component---src-pages-capacitacion-cursos-virtuales-con-certificacion-js": () => import("../src/pages/capacitacion/cursos-virtuales-con-certificacion.js" /* webpackChunkName: "component---src-pages-capacitacion-cursos-virtuales-con-certificacion-js" */),
+  "component---src-pages-capacitacion-cursos-virtuales-gratuitos-js": () => import("../src/pages/capacitacion/cursos-virtuales-gratuitos.js" /* webpackChunkName: "component---src-pages-capacitacion-cursos-virtuales-gratuitos-js" */),
+  "component---src-pages-capacitacion-index-js": () => import("../src/pages/capacitacion/index.js" /* webpackChunkName: "component---src-pages-capacitacion-index-js" */),
+  "component---src-pages-contacto-js": () => import("../src/pages/contacto.js" /* webpackChunkName: "component---src-pages-contacto-js" */),
+  "component---src-pages-corporativos-js": () => import("../src/pages/corporativos.js" /* webpackChunkName: "component---src-pages-corporativos-js" */),
+  "component---src-pages-descargas-facturacion-electronica-js": () => import("../src/pages/descargas/facturacion-electronica.js" /* webpackChunkName: "component---src-pages-descargas-facturacion-electronica-js" */),
+  "component---src-pages-descargas-index-js": () => import("../src/pages/descargas/index.js" /* webpackChunkName: "component---src-pages-descargas-index-js" */),
+  "component---src-pages-descargas-my-business-js": () => import("../src/pages/descargas/my-business.js" /* webpackChunkName: "component---src-pages-descargas-my-business-js" */),
+  "component---src-pages-descargas-tiempo-aire-js": () => import("../src/pages/descargas/tiempo-aire.js" /* webpackChunkName: "component---src-pages-descargas-tiempo-aire-js" */),
+  "component---src-pages-homologaciones-js": () => import("../src/pages/homologaciones.js" /* webpackChunkName: "component---src-pages-homologaciones-js" */),
+  "component---src-pages-index-js": () => import("../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
+  "component---src-pages-nosotros-js": () => import("../src/pages/nosotros.js" /* webpackChunkName: "component---src-pages-nosotros-js" */),
+  "component---src-pages-productos-bill-pocket-js": () => import("../src/pages/productos/bill-pocket.js" /* webpackChunkName: "component---src-pages-productos-bill-pocket-js" */),
+  "component---src-pages-productos-desarrollo-a-la-medida-js": () => import("../src/pages/productos/desarrollo-a-la-medida.js" /* webpackChunkName: "component---src-pages-productos-desarrollo-a-la-medida-js" */),
+  "component---src-pages-productos-facturacion-electronica-js": () => import("../src/pages/productos/facturacion-electronica.js" /* webpackChunkName: "component---src-pages-productos-facturacion-electronica-js" */),
+  "component---src-pages-productos-index-js": () => import("../src/pages/productos/index.js" /* webpackChunkName: "component---src-pages-productos-index-js" */),
+  "component---src-pages-productos-my-business-js": () => import("../src/pages/productos/my-business.js" /* webpackChunkName: "component---src-pages-productos-my-business-js" */),
+  "component---src-pages-productos-pos-tools-js": () => import("../src/pages/productos/pos-tools.js" /* webpackChunkName: "component---src-pages-productos-pos-tools-js" */),
+  "component---src-pages-productos-servicios-en-la-nube-js": () => import("../src/pages/productos/servicios-en-la-nube.js" /* webpackChunkName: "component---src-pages-productos-servicios-en-la-nube-js" */),
+  "component---src-pages-productos-tiempo-aire-js": () => import("../src/pages/productos/tiempo-aire.js" /* webpackChunkName: "component---src-pages-productos-tiempo-aire-js" */),
+  "component---src-pages-registro-de-licencias-js": () => import("../src/pages/registro-de-licencias.js" /* webpackChunkName: "component---src-pages-registro-de-licencias-js" */),
+  "component---src-pages-soporte-index-js": () => import("../src/pages/soporte/index.js" /* webpackChunkName: "component---src-pages-soporte-index-js" */),
+  "component---src-pages-soporte-manuales-js": () => import("../src/pages/soporte/manuales.js" /* webpackChunkName: "component---src-pages-soporte-manuales-js" */),
+  "component---src-pages-soporte-preguntas-frecuentes-js": () => import("../src/pages/soporte/preguntas-frecuentes.js" /* webpackChunkName: "component---src-pages-soporte-preguntas-frecuentes-js" */),
+  "component---src-pages-soporte-video-tutoriales-bill-pocket-js": () => import("../src/pages/soporte/video-tutoriales/bill-pocket.js" /* webpackChunkName: "component---src-pages-soporte-video-tutoriales-bill-pocket-js" */),
+  "component---src-pages-soporte-video-tutoriales-facturacion-js": () => import("../src/pages/soporte/video-tutoriales/facturacion.js" /* webpackChunkName: "component---src-pages-soporte-video-tutoriales-facturacion-js" */),
+  "component---src-pages-soporte-video-tutoriales-index-js": () => import("../src/pages/soporte/video-tutoriales/index.js" /* webpackChunkName: "component---src-pages-soporte-video-tutoriales-index-js" */),
+  "component---src-pages-soporte-video-tutoriales-varios-js": () => import("../src/pages/soporte/video-tutoriales/varios.js" /* webpackChunkName: "component---src-pages-soporte-video-tutoriales-varios-js" */),
+  "component---src-pages-tienda-virtual-index-js": () => import("../src/pages/tienda-virtual/index.js" /* webpackChunkName: "component---src-pages-tienda-virtual-index-js" */),
+  "component---src-pages-tienda-virtual-my-business-js": () => import("../src/pages/tienda-virtual/my-business.js" /* webpackChunkName: "component---src-pages-tienda-virtual-my-business-js" */),
+  "component---src-pages-tienda-virtual-timbres-fiscales-js": () => import("../src/pages/tienda-virtual/timbres-fiscales.js" /* webpackChunkName: "component---src-pages-tienda-virtual-timbres-fiscales-js" */)
+}
+

@@ -57,6 +57,7 @@ const sharedButton = css`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: 100%;
 
   &:hover {
     transform: translate(0px, -2px);
@@ -65,15 +66,9 @@ const sharedButton = css`
 
 export const ButtonPrimary = styled(Link)`
   ${sharedButton}
-  border-color: ${props => props.theme.colors.bodyColor};
-  background: ${props => props.theme.colors.bodyColor};
-  color: ${props => props.theme.colors.whiteColor};
-
-  &:hover {
-    border-color: ${props => props.theme.colors.primaryColor};
-    background: ${props => props.theme.colors.primaryColor};
-    color: ${props => props.theme.colors.bodyColor};
-  }
+  border-color: ${props => props.theme.colors.whiteColor};
+  background: ${props => props.theme.colors.whiteColor};
+  color: ${props => props.theme.colors.primaryColor};
 `;
 
 export const FlexContainer = styled.div`

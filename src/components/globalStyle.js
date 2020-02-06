@@ -289,7 +289,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    color: #141943;
+    color: #000;
     font-family: "Neue Haas Unica Pro", sans-serif;
     font-weight: normal;
     word-wrap: break-word;
@@ -648,13 +648,22 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .form-control {
-    border: 1px solid #E9E9E9;
-    border-radius: 2px;
-    padding: 1rem 2rem;
-    height: 53px;
+    border: 0;
+    background: rgba(255, 255, 255,.05);
+    padding: 1rem;
     width: 100%;
     margin-bottom: 1rem;
     outline: 0;
+    transition: all 0.33s ease-in-out;
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+    }
+
+    &:focus {
+      background: rgba(255, 255, 255,.1);
+    }
   }
 
   .uppercase {
@@ -664,5 +673,9 @@ export const GlobalStyle = createGlobalStyle`
 
   p {
     font-size: 20px;
+  }
+
+  a {
+    color: #000!important;
   }
 `;

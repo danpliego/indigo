@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
         <Layout.Row style={{ alignItems: "center" }}>
           <LogoContainer>
             <a href="/">
-              <img src={Logo} width="149" />
+              <img src={Logo} width="160" />
             </a>
           </LogoContainer>
           <MobileMenu onClick={() => setOpenMenu(!openMenu)}>

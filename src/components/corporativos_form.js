@@ -3,7 +3,7 @@
 // Finally, add a <MyForm/> element whereever you wish to display the form.
 
 import React from "react";
-import { ButtonDownload } from "./layoutComponents";
+import { ButtonPrimary } from "./layoutComponents";
 
 export default class CorporativosForm extends React.Component {
   constructor(props) {
@@ -32,26 +32,20 @@ export default class CorporativosForm extends React.Component {
           className="form-control"
           type="text"
           name="telefono"
-          placeholder="Correo"
-        />
-        <input
-          className="form-control"
-          type="email"
-          name="email"
-          placeholder="Giro Comercial"
+          placeholder="Correo electrónico"
         />
         <input
           className="form-control"
           type="text"
           name="descripcion"
-          placeholder="Descripción del requerimiento"
+          placeholder="Mensaje"
         />
         {status === "SUCCESS" ? (
           <p style={{ padding: "1rem", textAlign: "center" }}>
             Gracias! Tu descarga está por iniciar
           </p>
         ) : (
-          <ButtonDownload>Enviar</ButtonDownload>
+          <ButtonPrimary>Enviar</ButtonPrimary>
         )}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>

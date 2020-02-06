@@ -4,11 +4,6 @@ import * as Comp from "./layoutComponents";
 import { Link } from "gatsby";
 import { theme } from "./theme";
 
-import Facebook from "../images/icons/facebook.svg";
-import Twitter from "../images/icons/twitter.svg";
-import Instagram from "../images/icons/instagram.svg";
-import Youtube from "../images/icons/youtube.svg";
-
 const Footer = () => (
   <FooterContainer>
     <Comp.Container>
@@ -82,33 +77,6 @@ const Footer = () => (
                   Distribuidores certificados
                 </Link>
               </li>
-            </FooterMenu>
-            <FooterMenu>
-              <h6>Redes Sociales</h6>
-              <a
-                style={{ marginRight: "0.66rem" }}
-                href="https://www.facebook.com/MyBusinessPOSD/"
-              >
-                <img src={Facebook} />
-              </a>
-              <a
-                style={{ marginRight: "0.66rem" }}
-                href="https://www.instagram.com/mybusinessposd/"
-              >
-                <img src={Instagram} />
-              </a>
-              <a
-                style={{ marginRight: "0.66rem" }}
-                href="https://twitter.com/mybusinessposd"
-              >
-                <img src={Twitter} />
-              </a>
-              <a
-                style={{ marginRight: "0.66rem" }}
-                href="https://www.youtube.com/user/MyBusinessPOSD"
-              >
-                <img src={Youtube} />
-              </a>
             </FooterMenu>
           </Comp.Column>
         </Comp.Row>

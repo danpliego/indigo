@@ -5,6 +5,8 @@ import * as Layout from "./layoutComponents";
 import { Link } from "gatsby";
 import { theme } from "./theme";
 
+import Logo from "../images/logo.png";
+
 export const Header: React.FC = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -13,7 +15,9 @@ export const Header: React.FC = () => {
       <Layout.Container>
         <Layout.Row style={{ alignItems: "center" }}>
           <LogoContainer>
-            <Link to="/">logo</Link>
+            <a href="/">
+              <img src={Logo} width="149" />
+            </a>
           </LogoContainer>
           <MobileMenu onClick={() => setOpenMenu(!openMenu)}>
             <svg
@@ -76,24 +80,25 @@ const HeaderContainer = styled.header`
 
 export const Menu = styled.div`
   display: flex;
-  padding-left: 2rem;
+  padding-left: 3rem;
 `;
 
 export const MenuItem = styled.div`
   transition: all 0.3s ease-in-out;
   font-size: 0.9rem;
 
-  > a,
-  span {
+  a {
     padding: 1rem 1.5rem;
     display: block;
     position: relative;
-    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: ${theme.colors.primaryColor};
 
     &:after {
       content: " ";
-      height: 2px;
-      background: ${theme.colors.bodyLColor};
+      height: 1px;
+      background: ${theme.colors.primaryColor};
       position: absolute;
       bottom: 0;
       left: 1.5rem;

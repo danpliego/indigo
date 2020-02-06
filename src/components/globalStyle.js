@@ -2,39 +2,23 @@ import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 
 // eslint-disable-next-line
-const GTAmericaExtendedRegular = require("../fonts/GT-America-Extended-Regular.otf");
+const NeueLight = require("../fonts/NeueHaasUnicaPro-Light.ttf");
 // eslint-disable-next-line
-const GTAmericaExtendedMedium = require("../fonts/GT-America-Extended-Medium.otf");
-// eslint-disable-next-line
-const TiemposHeadline = require("../fonts/TiemposHeadline-Bold.otf");
-// eslint-disable-next-line
-const TiemposHeadlineMedium = require("../fonts/TiemposHeadline-Medium.otf");
+const NeueBold = require("../fonts/NeueHaasUnicaPro-Bold.ttf");
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: "GT-America";
+    font-family: "Neue Haas Unica Pro";
     font-style: normal;
     font-weight: 400;
-    src: url(${GTAmericaExtendedRegular});
+    src: url(${NeueLight});
   }
 
   @font-face {
-    font-family: "GT-America";
+    font-family: "Neue Haas Unica Pro";
     font-style: normal;
     font-weight: 600;
-    src: url(${GTAmericaExtendedMedium});
-  }
-
-  @font-face {
-    font-family: "Tiempos-Headline";
-    font-weight: 400;
-    src: url(${TiemposHeadlineMedium});
-  }
-  
-  @font-face {
-    font-family: "Tiempos-Headline";
-    font-weight: 600;
-    src: url(${TiemposHeadline});
+    src: url(${NeueBold});
   }
 
 
@@ -124,15 +108,6 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.25;
     margin-top: 0;
     margin-bottom: 1rem;
-  }
-
-  .extended {
-    font-family: "Tiempos-Headline";
-  }
-
-  .extended-medium {
-    font-family: "Tiempos-Headline";
-    font-weight: 400;
   }
 
   h1 {
@@ -299,13 +274,11 @@ export const GlobalStyle = createGlobalStyle`
     font: inherit;
   }
   html {
-    font: 16px GT-America, sans-serif;
+    font: 16px "Neue Haas Unica Pro", sans-serif;
     box-sizing: border-box;
     overflow-y: scroll;
   }
-  button {
-    font: 16px GT-America, sans-serif;
-  }
+
   * {
     box-sizing: inherit;
   }
@@ -317,7 +290,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     color: #141943;
-    font-family: GT-America, sans-serif;
+    font-family: "Neue Haas Unica Pro", sans-serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -325,7 +298,7 @@ export const GlobalStyle = createGlobalStyle`
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-    background: #F7F9FA;
+    background: #fff;
   }
   img {
     max-width: 100%;
@@ -684,24 +657,12 @@ export const GlobalStyle = createGlobalStyle`
     outline: 0;
   }
 
-  .reset-padding {
-    padding: 0!important;
-  }
-
-  table {
-    tr:nth-child(odd) td {
-      background: #f9f9f9;
-    }
-    td, th {
-      vertical-align: top;
-      font-size: 14px;
-      padding: 1rem!important;
-      border: 1px solid #F4f4f4;
-    }
-  }
-
   .uppercase {
     letter-spacing: 2px;
     text-transform: uppercase;
+  }
+
+  p {
+    font-size: 20px;
   }
 `;

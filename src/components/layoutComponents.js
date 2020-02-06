@@ -63,10 +63,6 @@ const sharedButton = css`
   }
 `;
 
-export const ButtonContainer = styled.div`
-  display: flex;
-`;
-
 export const ButtonPrimary = styled(Link)`
   ${sharedButton}
   border-color: ${props => props.theme.colors.bodyColor};
@@ -78,38 +74,6 @@ export const ButtonPrimary = styled(Link)`
     background: ${props => props.theme.colors.primaryColor};
     color: ${props => props.theme.colors.bodyColor};
   }
-`;
-
-export const ButtonSecondary = styled(Link)`
-  ${sharedButton}
-  color: ${props => props.theme.colors.bodyColor};
-  border-color: ${props => props.theme.colors.bodyColor};
-
-  &:hover {
-    border-color: ${props => props.theme.colors.primaryColor};
-    background: ${props => props.theme.colors.primaryColor};
-    color: ${props => props.theme.colors.bodyColor};
-  }
-`;
-
-export const ButtonInverse = styled(Link)`
-  ${sharedButton}
-  color: ${props => props.theme.colors.whiteColor};
-  border-color: ${props => props.theme.colors.whiteColor};
-
-  &:hover {
-    border-color: ${props => props.theme.colors.primaryColor};
-    background: ${props => props.theme.colors.primaryColor};
-    color: ${props => props.theme.colors.bodyColor};
-  }
-`;
-
-export const ButtonDownload = styled.button`
-  ${sharedButton}
-  border-color: ${props => props.theme.colors.primaryColor};
-  background: ${props => props.theme.colors.primaryColor};
-  color: ${props => props.theme.colors.bodyColor};
-  width: 100%;
 `;
 
 export const FlexContainer = styled.div`
@@ -150,7 +114,7 @@ export const sharedContainer = css`
   padding: 3rem 1rem;
 
   @media ${theme.breakpoint.upFromMobile} {
-    padding: 5rem 3rem 3rem;
+    padding: 6rem 3rem;
   }
 `;
 
@@ -170,90 +134,48 @@ export const Width50 = styled.div`
   }
 `;
 
-export const BannerContainer = styled.div`
-  position: relative;
-  overflow: hidden;
+export const BackgroundImageContainer = styled.div`
+  ${sharedContainer}
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 `;
 
-export const BannerImage = styled.div`
-  background: #141943;
-  overflow: hidden;
-  position: absolute;
-  margin-bottom: -1rem;
-  min-width: 100%;
-
-  @media ${theme.breakpoint.upFromMobile} {
-    height: 100%;
-  }
+const sharedSectionTitle = css`
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1rem;
+  display: inline-flex;
+  margin-bottom: 3.5rem;
 
   &:after {
     content: " ";
-    background: #141943;
-    opacity: 0.4;
+    height: 2px;
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-  }
-
-  > img {
-    margin-bottom: -1rem;
-    width: auto;
-    max-width: none;
-    min-width: 100%;
-    min-height: 100%;
-
-    @media ${theme.breakpoint.onlyMobile} {
-      max-width: none;
-      max-height: 400px;
-      margin-left: -25%;
-    }
+    bottom: -1rem;
+    left: 1.5rem;
+    right: 1.5rem;
   }
 `;
 
-export const BannerContent = styled.div`
-  position: relative;
-  top: 0;
-  padding: 10%;
-  z-index: 1;
+export const SectionTitle = styled.h2`
+  ${sharedSectionTitle}
 
-  h1,
-  h2,
-  p {
-    color: white;
-    text-align: center;
-  }
-
-  @media ${theme.breakpoint.onlyMobile} {
-    h1,
-    h2 {
-      font-size: 1.5rem;
-    }
+  &:after {
+    background: ${theme.colors.bodyColor};
   }
 `;
 
-export const BannerBox = styled.div`
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  margin: 3rem 0;
+export const SectionTitleInverse = styled.h2`
+  ${sharedSectionTitle};
+  color: ${theme.colors.whiteColor};
 
-  @media ${theme.breakpoint.upFromMobile} {
-    margin: 5rem 0;
+  &:after {
+    background: ${theme.colors.whiteColor};
   }
-
-  > div {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-    padding: 2rem;
-  }
-`;
-
-export const TableResponsive = styled.div`
-  max-width: 100%;
-  overflow: scroll;
 `;
 
 // Margin Utilities

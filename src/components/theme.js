@@ -1,10 +1,9 @@
 export const theme = {
   colors: {
-    whiteColor: "#FBFCFD",
-    primaryColor: "#A0D0D6",
-    bodyColor: "#141943",
-    bodyLColor: "#5B5E7B",
-    grayColor: "#f0f4f6"
+    whiteColor: "#fff",
+    primaryColor: "#024DBE",
+    bodyColor: "#000",
+    grayColor: "#F1F1F1"
   },
   fontSizes: {
     body: "1rem",

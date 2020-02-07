@@ -52,6 +52,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
   article,
   aside,
   details,
@@ -673,6 +677,10 @@ export const GlobalStyle = createGlobalStyle`
 
   p {
     font-size: 20px;
+
+    @media ${theme.breakpoint.onlyMobile} {
+      font-size: 18px;
+    }
   }
 
   a {

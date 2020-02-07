@@ -56,14 +56,14 @@ const IndexPage = () => (
 
     <div style={{ background: "#fff" }}>
       <Comp.Width75>
-        <p style={{ textAlign: "center", fontSize: "28px" }}>
+        <p style={{ textAlign: "center", fontSize: "26px" }}>
           Nuestra intención es ser un aliado de su organización proporcionándole
           un servicio de traducción profesional, ágil y confiable.
         </p>
       </Comp.Width75>
     </div>
 
-    <Nosotros>
+    <Nosotros id="nosotros">
       <Comp.Container>
         <Comp.Width75 style={{ padding: "0" }}>
           <Comp.TextCenter>
@@ -76,8 +76,8 @@ const IndexPage = () => (
               internacional.{" "}
             </p>
           </Comp.TextCenter>
-          <MiguelSection>
-            <Comp.Column style={{ paddingRight: "3rem" }}>
+          <MiguelSection mobile>
+            <MiguelPhoto>
               <img src={MiguelImage} width="230px" />
               <p
                 style={{
@@ -90,7 +90,7 @@ const IndexPage = () => (
                 <br />
                 Director General
               </p>
-            </Comp.Column>
+            </MiguelPhoto>
             <Comp.Column style={{ flex: "1" }}>
               <p>
                 Previamente a fundar Indigo Translations Miguel laboró
@@ -114,7 +114,7 @@ const IndexPage = () => (
       </Comp.Container>
     </Nosotros>
     <Servicios>
-      <Comp.Row>
+      <Comp.Row mobile>
         <Comp.Column style={{ flex: "1" }}>
           <ServiciosContent>
             <p>
@@ -142,7 +142,7 @@ const IndexPage = () => (
       </Comp.Row>
     </Servicios>
 
-    <Comp.Row>
+    <Comp.Row mobile>
       <GridImage style={{ flex: "1" }}>
         <img src={TraductoresImage} />
       </GridImage>
@@ -160,9 +160,9 @@ const IndexPage = () => (
       </Comp.Column>
     </Comp.Row>
 
-    <Banner>
+    <Banner id="servicios">
       <Comp.Width75>
-        <p style={{ textAlign: "center", fontSize: "28px" }}>
+        <p style={{ textAlign: "center", fontSize: "26px" }}>
           Nuestra cartera de clientes está formada por instituciones
           financieras, firmas legales internacionales con presencia en México,
           empresas Oil & Gas, entre otros.
@@ -334,7 +334,7 @@ const IndexPage = () => (
       </Comp.Width75>
     </Proceso>
 
-    <Confidencialidad>
+    <Confidencialidad mobile>
       <GridImage style={{ flex: "1" }}>
         <img src={ConfidencialidadImage} />
       </GridImage>
@@ -359,8 +359,8 @@ const IndexPage = () => (
       </Comp.Column>
     </Confidencialidad>
 
-    <div>
-      <Comp.Row>
+    <div id="contacto">
+      <Comp.Row mobile>
         <Comp.Column
           style={{ flex: "1", background: `${theme.colors.primaryColor}` }}
         >
@@ -436,15 +436,6 @@ export const HeroContent = styled(Comp.Column)`
       font-size: 54px;
     }
   }
-
-  @media ${theme.breakpoint.onlyMobile} {
-    margin-bottom: 2rem;
-    order: 2;
-
-    h1 {
-      margin: -1rem 0 1rem;
-    }
-  }
 `;
 
 const Nosotros = styled(Comp.BackgroundImageContainer)`
@@ -477,6 +468,16 @@ const MiguelSection = styled(Comp.Row)`
   color: #fff;
   position: relative;
   z-index: 1;
+
+  @media ${theme.breakpoint.onlyMobile} {
+    text-align: center;
+  }
+`;
+
+const MiguelPhoto = styled(Comp.Column)`
+  @media ${theme.breakpoint.upFromMobile} {
+    padding-right: 3rem;
+  }
 `;
 
 const Servicios = styled.div`
@@ -491,11 +492,18 @@ const ServiciosContent = styled.div`
 `;
 
 const GridImage = styled(Comp.Column)`
-  position: relative;
-  overflow: hidden;
+  @media ${theme.breakpoint.upFromMobile} {
+    position: relative;
+    overflow: hidden;
 
-  img {
-    position: absolute;
+    img {
+      position: absolute;
+      min-height: 100%;
+    }
+  }
+
+  @media ${theme.breakpoint.onlyMobile} {
+    order: 2;
   }
 `;
 
@@ -505,14 +513,26 @@ const GridContent = styled.div`
 `;
 
 const ServiciosImageContainer = styled(Comp.Column)`
-  flex: 1;
-  overflow: hidden;
-  position: relative;
+  @media ${theme.breakpoint.upFromMobile} {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
 
-  img {
-    position: absolute;
-    left: 0;
-    top: 0;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      min-height: 100%;
+    }
+  }
+
+  @media ${theme.breakpoint.onlyMobile} {
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      margin-top: -150px;
+    }
   }
 `;
 
@@ -533,6 +553,16 @@ const ImageColumn = styled(Comp.Column)`
   max-width: 16.6666667%;
   flex-wrap: wrap;
   cursor: pointer;
+
+  @media (max-width: 992px) {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
 
   &:hover {
     img {
@@ -556,6 +586,7 @@ const ImageColumn = styled(Comp.Column)`
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 0;
+    padding: 1rem;
   }
 `;
 
@@ -608,6 +639,13 @@ const ProcessStep = styled(Comp.Row)`
 `;
 
 const Confidencialidad = styled(Comp.Row)`
-  margin-top: -10rem;
   background: #000;
+
+  @media ${theme.breakpoint.upMobile} {
+    margin-top: -10rem;
+  }
+
+  @media ${theme.breakpoint.onlyMobile} {
+    margin-top: -7rem;
+  }
 `;

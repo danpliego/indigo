@@ -6,7 +6,7 @@ import { theme } from "./theme";
 const Footer = () => (
   <FooterContainer>
     <Comp.Container>
-      <Comp.Row>
+      <Comp.Row mobile>
         <Comp.Column>
           <Comp.Row
             style={{
@@ -36,6 +36,9 @@ const FooterContainer = styled.footer`
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 0.7rem;
+  a {
+    color: #fff !important;
+  }
 `;
 
 const BodyFooter = styled(Comp.Column)`

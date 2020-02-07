@@ -45,16 +45,16 @@ export const Header: React.FC = () => {
           <CollapsableMenu flex={1} isOpen={openMenu}>
             <Menu>
               <MenuItem>
-                <a href="/corporativos/">Inicio</a>
+                <a href="/">Inicio</a>
               </MenuItem>
               <MenuItem>
-                <a href="/corporativos/">Nosotros</a>
+                <a href="#nosotros">Nosotros</a>
               </MenuItem>
               <MenuItem>
-                <a href="/corporativos/">Servicios</a>
+                <a href="#servicios">Servicios</a>
               </MenuItem>
               <MenuItem>
-                <a href="/corporativos/">Contacto</a>
+                <a href="#contacto">Contacto</a>
               </MenuItem>
             </Menu>
           </CollapsableMenu>
@@ -93,7 +93,11 @@ export const MenuItem = styled.div`
     position: relative;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: ${theme.colors.primaryColor};
+    color: ${theme.colors.primaryColor}!important;
+
+    &:hover {
+      text-decoration: none;
+    }
 
     &:after {
       content: " ";

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `MyBusiness POS - El punto de venta más vendido en el mercado.`,
-    description: `Olvídate de las largas capacitaciones para usar un sistema de punto de venta, descarga gratis MyBusiness POS y comprueba lo fácil que es vender.`,
+    title: `Indigo Translations`,
+    description: `Traducciones de caracter técnico para empresas`,
     author: ``
   },
   plugins: [

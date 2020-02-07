@@ -93,7 +93,7 @@ export const MenuItem = styled.div`
     position: relative;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: ${theme.colors.primaryColor}!important;
+    color: ${theme.colors.primaryColor};
 
     &:hover {
       text-decoration: none;
@@ -133,10 +133,9 @@ export const CollapsableMenu = styled(Layout.Column)<{
         top: 5.5rem;
         width: 100%;
         left: 0;
-        background: ${theme.colors.bodyColor};
+        background: ${theme.colors.primaryColor};
         padding: 0;
         z-index: 1000;
-        height: 100vh;
 
         > div {
           flex-direction: column;
@@ -147,11 +146,7 @@ export const CollapsableMenu = styled(Layout.Column)<{
           color: #fff;
           padding: 1.5rem;
           text-align: center;
-          border-bottom: 1px solid ${theme.colors.bodyLColor};
-
-          &:hover {
-            border-bottom: 1px solid ${theme.colors.bodyLColor};
-          }
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
       }
     `}

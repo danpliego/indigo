@@ -44,9 +44,6 @@ export const GlobalStyle = createGlobalStyle`
     h1,h2,h3,h4,h5,h6 {
     color: #0c2340;
     }
-    a {
-      color: #2A5DB0;
-    }
   }
   a {
     text-decoration: none;
@@ -684,6 +681,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #000!important;
+    color: #000;
   }
 `;

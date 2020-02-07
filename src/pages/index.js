@@ -560,8 +560,8 @@ const ImageColumn = styled(Comp.Column)`
   }
 
   @media (max-width: 768px) {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
   &:hover {

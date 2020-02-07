@@ -131,9 +131,11 @@ export const Width50 = styled.div`
 
 export const BackgroundImageContainer = styled.div`
   ${sharedContainer}
+  @media ${theme.breakpoint.upFromMobile} {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  }
   background-size: cover;
   color: #fff;
 `;

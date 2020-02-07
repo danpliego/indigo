@@ -8,7 +8,6 @@ import { theme } from "../components/theme";
 
 import Logo from "../images/logo.png";
 
-import HeroImage from "../images/hero-placeholder.png";
 import NosotrosImage from "../images/nosotros.jpg";
 import ServiciosImage from "../images/satelite.png";
 import TraductoresImage from "../images/buques.png";
@@ -34,12 +33,17 @@ import IconEmail from "../images/icons/email.svg";
 import ProcesoBG from "../images/textura-proceso.png";
 import BannerBG from "../images/textura-banner.png";
 
+import Video from "../images/video.mp4";
+
 import CorporativosForm from "../components/corporativos_form.js";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Hero style={{ backgroundImage: `${HeroImage}` }}>
+    <Hero>
+      <video autoPlay muted loop>
+        <source src={Video} type="video/mp4" />
+      </video>
       <Comp.Container>
         <HeroContent>
           <h1 style={{ color: "#fff" }}>
@@ -417,7 +421,22 @@ export default IndexPage;
 
 export const Hero = styled(Comp.BackgroundImageContainer)`
   border-bottom: 10px solid ${theme.colors.primaryColor};
-  background-image: url(${HeroImage});
+  position: relative;
+  overflow: hidden;
+
+  > div {
+    position: relative;
+    z-index: 2;
+  }
+
+  video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background: red;
+  }
 `;
 
 export const HeroContent = styled(Comp.Column)`

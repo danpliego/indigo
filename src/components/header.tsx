@@ -64,18 +64,11 @@ export const Header: React.FC = () => {
   );
 };
 
-const StyledHeader = styled(Header)`
-  color: var(--white);
-  background: var(--primary-color);
-  padding: 1rem 0;
-  margin-bottom: 1rem;
-  h1 {
-    margin: 0;
-  }
-`;
-
 const HeaderContainer = styled.header`
   padding: 1.5rem 0;
+  z-index: 1;
+  position: relative;
+  background: #fff;
 `;
 
 export const Menu = styled.div`

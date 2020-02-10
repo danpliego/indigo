@@ -74,9 +74,9 @@ const IndexPage = () => (
             <Comp.SectionTitleInverse>Nosotros</Comp.SectionTitleInverse>
             <p>
               Indigo Translations fue fundado en Mayo de 2019 en la Ciudad de
-              México por el Lic. Miguel Burle. Miguel funda Indigo Translations
-              al percatarse de que la accesibilidad a un contenido en diversos
-              idiomas se ha convertido primordial para la industria
+              México por el Lic. Miguel Burle. Miguel fundó Indigo Translations
+              al darse cuenta que la accesibilidad a un contenido en diversos
+              idiomas se ha convertido en algo primordial para la industria
               internacional.{" "}
             </p>
           </Comp.TextCenter>
@@ -97,14 +97,15 @@ const IndexPage = () => (
             </MiguelPhoto>
             <Comp.Column style={{ flex: "1" }}>
               <p>
-                Previamente a fundar Indigo Translations Miguel laboró
+                Previo a fundar Indigo Translations Miguel laboró
                 aproximadamente 8 años en una prestigiosa firma legal en la
                 Ciudad de México en donde participó en la negociación y asesoría
                 en fusiones, adquisiciones, <i>joint ventures</i>, escisiones y
-                liquidaciones, representando a empresas nacionales,
-                internacionales, fondos de capital privado y fondos de capital
-                de riesgo así como en la preparación de documentación
-                transaccional para diversas industrias.
+                liquidaciones. <br />
+                Representando a empresas nacionales, internacionales, fondos de
+                capital privado y fondos de capital de riesgo así como en la
+                preparación de documentación transaccional para diversas
+                industrias.
                 <br />
                 <br />
                 <strong>
@@ -130,7 +131,7 @@ const IndexPage = () => (
               <br />
               Si es que usted se puso en contacto con nosotros para enfrentar la
               internacionalización, la comunicación efectiva entre los miembros
-              su organización o la comprensión de contenido, nuestro equipo
+              de su organización o la comprensión de contenido, nuestro equipo
               podrá adaptarse a sus necesidades, tiempos de entrega y demás
               particularidades que le puedan surgir en el día a día. <br />
               <br />

@@ -66,7 +66,7 @@ export const Header: React.FC = () => {
 
 const HeaderContainer = styled.header`
   padding: 1.5rem 0;
-  z-index: 1;
+  z-index: 1000;
   position: relative;
   background: #fff;
 `;

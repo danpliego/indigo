@@ -7,6 +7,9 @@ export const MainWrapper = styled.div`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  max-width: 1600px;
+  margin: 0px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 `;
 
 export const Container = styled.div`

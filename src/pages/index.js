@@ -423,6 +423,7 @@ export const Hero = styled(Comp.BackgroundImageContainer)`
   border-bottom: 10px solid ${theme.colors.primaryColor};
   position: relative;
   overflow: hidden;
+  background: ${theme.colors.bodyColor};
 
   > div {
     position: relative;
@@ -435,7 +436,6 @@ export const Hero = styled(Comp.BackgroundImageContainer)`
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    background: red;
   }
 `;
 

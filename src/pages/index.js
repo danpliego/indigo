@@ -9,10 +9,10 @@ import { theme } from "../components/theme";
 import Logo from "../images/logo.png";
 
 import NosotrosImage from "../images/nosotros.jpg";
-import ServiciosImage from "../images/satelite.png";
-import TraductoresImage from "../images/buques.png";
+import ServiciosImage from "../images/satelite.jpeg";
+import TraductoresImage from "../images/buques.jpeg";
 import MiguelImage from "../images/miguel.png";
-import ConfidencialidadImage from "../images/soumaya.png";
+import ConfidencialidadImage from "../images/soumaya.jpeg";
 
 import BursatilImage from "../images/servicios/bursatil.jpg";
 import LegalImage from "../images/servicios/legal.jpg";
@@ -27,11 +27,12 @@ import PatentesImage from "../images/servicios/patentes.jpg";
 import LaboralImage from "../images/servicios/laboral.jpg";
 import ContableImage from "../images/servicios/contable.jpg";
 
+import CarteraImage from "../images/cartera.jpeg";
+
 import IconLocation from "../images/icons/location.svg";
 import IconEmail from "../images/icons/email.svg";
 
 import ProcesoBG from "../images/textura-proceso.png";
-import BannerBG from "../images/textura-banner.png";
 
 import Video from "../images/video.mp4";
 
@@ -168,7 +169,7 @@ const IndexPage = () => (
       </Comp.Column>
     </Comp.Row>
 
-    <Banner id="servicios">
+    <BannerCartera id="servicios">
       <Comp.Width75>
         <p
           style={{ textAlign: "center", fontSize: "26px", fontWeight: "bold" }}
@@ -179,7 +180,7 @@ const IndexPage = () => (
           empresas <i>Oil & Gas</i>, entre otros.
         </p>
       </Comp.Width75>
-    </Banner>
+    </BannerCartera>
 
     <ImageRow>
       <ImageColumn>
@@ -630,8 +631,13 @@ const Proceso = styled.div`
   background: url(${ProcesoBG});
 `;
 
-const Banner = styled.div`
-  background: url(${BannerBG});
+const BannerCartera = styled(Comp.BackgroundImageContainer)`
+  background-image: url(${CarteraImage});
+  padding: 0 !important;
+
+  p {
+    color: #000;
+  }
 `;
 
 const ProcessStep = styled(Comp.Row)`

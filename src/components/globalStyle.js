@@ -683,4 +683,8 @@ export const GlobalStyle = createGlobalStyle`
   a {
     color: #000;
   }
+
+  .playfair-display {
+    font-family: 'Playfair Display', serif;
+  }
 `;

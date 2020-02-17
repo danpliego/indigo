@@ -21,16 +21,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <script>
-          {" "}
-          var _ctct_m = `&quot;7ea89593a1a2608140f0eb885dbe8aa3`&quot;;{" "}
-        </script>
-        <script
-          id="signupScript"
-          src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js"
-          async
-          defer
-        ></script>
+        <link
+          href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600&display=swap"
+          rel="stylesheet"
+        ></link>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <MainWrapper>

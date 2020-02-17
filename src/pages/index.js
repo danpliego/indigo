@@ -14,18 +14,18 @@ import TraductoresImage from "../images/buques.png";
 import MiguelImage from "../images/miguel.png";
 import ConfidencialidadImage from "../images/soumaya.png";
 
-import BursatilImage from "../images/servicios/bursatil.png";
-import LegalImage from "../images/servicios/legal.png";
-import FinancieroImage from "../images/servicios/financiero.png";
-import FiscalImage from "../images/servicios/fiscal.png";
-import InmobiliarioImage from "../images/servicios/inmobiliario.png";
-import OilGasImage from "../images/servicios/oilgas.png";
-import MedicoImage from "../images/servicios/medico.png";
-import TelecomImage from "../images/servicios/telecom.png";
-import InformaticaImage from "../images/servicios/informatica.png";
-import PatentesImage from "../images/servicios/patentes.png";
-import LaboralImage from "../images/servicios/laboral.png";
-import ContableImage from "../images/servicios/contable.png";
+import BursatilImage from "../images/servicios/bursatil.jpg";
+import LegalImage from "../images/servicios/legal.jpg";
+import FinancieroImage from "../images/servicios/financiero.jpg";
+import FiscalImage from "../images/servicios/fiscal.jpg";
+import InmobiliarioImage from "../images/servicios/inmobiliario.jpg";
+import OilGasImage from "../images/servicios/oilgas.jpg";
+import MedicoImage from "../images/servicios/medico.jpg";
+import TelecomImage from "../images/servicios/telecom.jpg";
+import InformaticaImage from "../images/servicios/informatica.jpg";
+import PatentesImage from "../images/servicios/patentes.jpg";
+import LaboralImage from "../images/servicios/laboral.jpg";
+import ContableImage from "../images/servicios/contable.jpg";
 
 import IconLocation from "../images/icons/location.svg";
 import IconEmail from "../images/icons/email.svg";
@@ -60,7 +60,10 @@ const IndexPage = () => (
 
     <div style={{ background: "#fff" }}>
       <Comp.Width75>
-        <p style={{ textAlign: "center", fontSize: "26px" }}>
+        <p
+          style={{ textAlign: "center", fontSize: "26px", fontWeight: "bold" }}
+          className="playfair-display"
+        >
           Nuestra intención es ser un aliado de su organización proporcionándole
           un servicio de traducción profesional, ágil y confiable.
         </p>
@@ -75,9 +78,9 @@ const IndexPage = () => (
             <p>
               Indigo Translations fue fundado en Mayo de 2019 en la Ciudad de
               México por el Lic. Miguel Burle. Miguel fundó Indigo Translations
-              al darse cuenta que la accesibilidad a un contenido en diversos
-              idiomas se ha convertido en algo primordial para la industria
-              internacional.{" "}
+              al percatarse que la accesibilidad a un contenido en diversos
+              idiomas se ha convertido en un elemento esencial para la industria
+              internacional.
             </p>
           </Comp.TextCenter>
           <MiguelSection mobile>
@@ -89,6 +92,7 @@ const IndexPage = () => (
                   fontSize: "1rem",
                   textAlign: "center"
                 }}
+                className="playfair-display"
               >
                 <strong>Miguel Burle</strong>
                 <br />
@@ -96,21 +100,20 @@ const IndexPage = () => (
               </p>
             </MiguelPhoto>
             <Comp.Column style={{ flex: "1" }}>
-              <p>
+              <p className="playfair-display">
                 Previo a fundar Indigo Translations Miguel laboró
                 aproximadamente 8 años en una prestigiosa firma legal en la
                 Ciudad de México en donde participó en la negociación y asesoría
-                en fusiones, adquisiciones, <i>joint ventures</i>, escisiones y
-                liquidaciones. <br />
-                Representando a empresas nacionales, internacionales, fondos de
-                capital privado y fondos de capital de riesgo así como en la
-                preparación de documentación transaccional para diversas
-                industrias.
+                en fusiones, adquisiciones, joint ventures, escisiones y
+                liquidaciones, representando a empresas nacionales,
+                internacionales, fondos de capital privado y fondos de capital
+                de riesgo así como en la preparación de documentación
+                transaccional para diversas industrias.
                 <br />
                 <br />
                 <strong>
                   Las raíces de Indigo Translations se encuentran profundamente
-                  en la investigación académica y la industria legal.{" "}
+                  en la investigación académica y la industria legal.
                 </strong>
               </p>
             </Comp.Column>
@@ -167,10 +170,13 @@ const IndexPage = () => (
 
     <Banner id="servicios">
       <Comp.Width75>
-        <p style={{ textAlign: "center", fontSize: "26px" }}>
+        <p
+          style={{ textAlign: "center", fontSize: "26px", fontWeight: "bold" }}
+          className="playfair-display"
+        >
           Nuestra cartera de clientes está formada por instituciones
           financieras, firmas legales internacionales con presencia en México,
-          empresas Oil & Gas, entre otros.
+          empresas <i>Oil & Gas</i>, entre otros.
         </p>
       </Comp.Width75>
     </Banner>

@@ -685,6 +685,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .playfair-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', serif;
   }
 `;

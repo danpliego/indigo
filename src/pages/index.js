@@ -524,7 +524,9 @@ const GridImage = styled(Comp.Column)`
 
     img {
       position: absolute;
-      min-height: 100%;
+      height: 100%;
+      width: auto;
+      max-width: none;
     }
   }
 
@@ -548,7 +550,9 @@ const ServiciosImageContainer = styled(Comp.Column)`
       position: absolute;
       left: 0;
       top: 0;
-      min-height: 100%;
+      height: 100%;
+      width: auto;
+      max-width: none;
     }
   }
 
@@ -600,7 +604,7 @@ const ImageColumn = styled(Comp.Column)`
     transition: all 0.33s ease-in-out;
     position: absolute;
     opacity: 0.2;
-    height: 100%;
+    height: 120%;
     max-width: none;
   }
 

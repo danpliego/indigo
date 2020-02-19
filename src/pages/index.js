@@ -62,7 +62,7 @@ const IndexPage = () => (
     <div style={{ background: "#fff" }}>
       <Comp.Width75>
         <p
-          style={{ textAlign: "center", fontSize: "26px", fontWeight: "bold" }}
+          style={{ textAlign: "center", fontSize: "30px", fontWeight: "bold" }}
           className="playfair-display"
         >
           Nuestra intención es ser un aliado de su organización proporcionándole
@@ -172,7 +172,7 @@ const IndexPage = () => (
     <BannerCartera id="servicios">
       <Comp.Width75>
         <p
-          style={{ textAlign: "center", fontSize: "26px", fontWeight: "bold" }}
+          style={{ textAlign: "center", fontSize: "30px", fontWeight: "bold" }}
           className="playfair-display"
         >
           Nuestra cartera de clientes está formada por instituciones

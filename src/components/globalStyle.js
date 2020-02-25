@@ -1,29 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 
-// eslint-disable-next-line
-const NeueLight = require("../fonts/NeueHaasUnicaPro-Light.ttf");
-// eslint-disable-next-line
-const NeueBold = require("../fonts/NeueHaasUnicaPro-Bold.ttf");
-
 export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: "Neue Haas Unica Pro";
-    font-style: normal;
-    font-weight: 400;
-    src: url(${NeueLight});
-  }
-
-  @font-face {
-    font-family: "Neue Haas Unica Pro";
-    font-style: normal;
-    font-weight: 600;
-    src: url(${NeueBold});
-  }
-
 
   :root {
-    --primary-color: #141943;
+    --primary-color: #454FBA;
     --white: #FFFAFF;
   }
   * {
@@ -99,7 +80,7 @@ export const GlobalStyle = createGlobalStyle`
   b,
   strong {
     font-weight: inherit;
-    font-weight: bolder;
+    font-weight: 500;
   }
   dfn {
     font-style: italic;
@@ -109,6 +90,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.25;
     margin-top: 0;
     margin-bottom: 1rem;
+    font-weight: 400;
   }
 
   h1 {
@@ -275,7 +257,7 @@ export const GlobalStyle = createGlobalStyle`
     font: inherit;
   }
   html {
-    font: 16px "Neue Haas Unica Pro", sans-serif;
+    font-family: 'Work Sans', sans-serif;
     box-sizing: border-box;
     overflow-y: scroll;
   }
@@ -291,7 +273,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     color: #000;
-    font-family: "Neue Haas Unica Pro", sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -492,16 +474,16 @@ export const GlobalStyle = createGlobalStyle`
     margin-bottom: 1.45rem;
   }
   b {
-    font-weight: bold;
+    font-weight: 500;
   }
   strong {
-    font-weight: bold;
+    font-weight: 500;
   }
   dt {
-    font-weight: bold;
+    font-weight: 500;
   }
   th {
-    font-weight: bold;
+    font-weight: 500;
   }
   li {
     margin-bottom: calc(1.45rem / 2);
@@ -682,9 +664,5 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     color: #000;
-  }
-
-  .playfair-display {
-    font-family: 'Roboto', serif;
   }
 `;

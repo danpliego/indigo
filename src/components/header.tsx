@@ -45,16 +45,12 @@ export const Header: React.FC = () => {
           <CollapsableMenu flex={1} isOpen={openMenu}>
             <Menu>
               <MenuItem>
-                <a href="/">Inicio</a>
+                <a href="tel:5510265196">+55 1026-5196</a>
               </MenuItem>
               <MenuItem>
-                <a href="#nosotros">Nosotros</a>
-              </MenuItem>
-              <MenuItem>
-                <a href="#servicios">Servicios</a>
-              </MenuItem>
-              <MenuItem>
-                <a href="#contacto">Contacto</a>
+                <a href="#contacto" className="primary">
+                  CONTÁCTANOS
+                </a>
               </MenuItem>
             </Menu>
           </CollapsableMenu>
@@ -77,7 +73,6 @@ export const Menu = styled.div`
 `;
 
 export const MenuItem = styled.div`
-  transition: all 0.3s ease-in-out;
   font-size: 0.9rem;
 
   a {
@@ -87,30 +82,29 @@ export const MenuItem = styled.div`
     text-transform: uppercase;
     letter-spacing: 3px;
     color: ${theme.colors.primaryColor};
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    font-size: 0.8rem;
+
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+
+    &.primary {
+      background: ${theme.colors.primaryColor};
+      color: #fff;
+    }
 
     &:hover {
       text-decoration: none;
-    }
-
-    &:after {
-      content: " ";
-      height: 1px;
-      background: ${theme.colors.primaryColor};
-      position: absolute;
-      bottom: 0;
-      left: 1.5rem;
-      right: 1.5rem;
-      opacity: 0;
-      transition: all 0.3s ease-in-out;
-    }
-
-    &:hover:after {
-      opacity: 1;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      transform: translate(0px, -2px);
     }
   }
 `;
 
-export const CollapsableMenu = styled(Layout.Column)<{
+export const CollapsableMenu = styled.div<{
   isOpen: boolean;
 }>`
   @media ${theme.breakpoint.onlyMobile} {
@@ -156,9 +150,7 @@ export const MobileMenu = styled.button`
 `;
 
 export const LogoContainer = styled(Layout.Column)`
-  @media ${theme.breakpoint.onlyMobile} {
-    flex: 1;
-  }
+  flex: 1;
 `;
 
 export const MobileLink = styled(Link)`

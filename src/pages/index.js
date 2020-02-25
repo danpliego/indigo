@@ -34,23 +34,16 @@ import IconEmail from "../images/icons/email.svg";
 
 import ProcesoBG from "../images/textura-proceso.png";
 
-import Video from "../images/video.mp4";
-
 import CorporativosForm from "../components/corporativos_form.js";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Hero>
-      <video autoPlay muted loop>
-        <source src={Video} type="video/mp4" />
-      </video>
       <Comp.Container>
         <HeroContent>
-          <h1 style={{ color: "#fff" }}>
-            Traducciones de carácter técnico para empresas
-          </h1>
-          <p style={{ color: "#fff" }}>
+          <h1>Traducciones de carácter técnico para empresas</h1>
+          <p>
             Nos enfocamos en traducciones de documentos de carácter técnico
             utilizando tecnología lingüística e involucrando a expertos en cada
             materia con el objetivo de garantizar un resultado óptimo.
@@ -62,7 +55,7 @@ const IndexPage = () => (
     <div style={{ background: "#fff" }}>
       <Comp.Width75>
         <p
-          style={{ textAlign: "center", fontSize: "30px", fontWeight: "bold" }}
+          style={{ textAlign: "center", fontSize: "28px", fontWeight: "bold" }}
           className="playfair-display"
         >
           Nuestra intención es ser un aliado de su organización proporcionándole
@@ -172,7 +165,7 @@ const IndexPage = () => (
     <BannerCartera id="servicios">
       <Comp.Width75>
         <p
-          style={{ textAlign: "center", fontSize: "30px", fontWeight: "bold" }}
+          style={{ textAlign: "center", fontSize: "28px", fontWeight: "bold" }}
           className="playfair-display"
         >
           Nuestra cartera de clientes está formada por instituciones
@@ -427,39 +420,33 @@ const IndexPage = () => (
 
 export default IndexPage;
 
-export const Hero = styled(Comp.BackgroundImageContainer)`
-  border-bottom: 10px solid ${theme.colors.primaryColor};
+export const Hero = styled.div`
   position: relative;
   overflow: hidden;
-  background: ${theme.colors.bodyColor};
+  background: ${theme.colors.whiteColor};
 
   > div {
     position: relative;
     z-index: 2;
   }
-
-  video {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
 `;
 
 export const HeroContent = styled(Comp.Column)`
-  padding: 3rem 0 5rem;
-  text-align: center;
+  padding: 5rem 0;
   min-height: 60vh;
   display: flex;
   justify-content: center;
 
   @media ${theme.breakpoint.upFromMobile} {
-    width: 75%;
-    margin: 0px auto;
-
+    width: 50%;
     h1 {
       margin-bottom: 2rem;
       font-size: 54px;
+      color: ${theme.colors.primaryColor};
+      text-shadow: 0 4px 4px rgba(2, 77, 190, 0.1);
+    }
+    p {
+      opacity: 0.5;
     }
   }
 `;
@@ -604,7 +591,7 @@ const ImageColumn = styled(Comp.Column)`
     transition: all 0.33s ease-in-out;
     position: absolute;
     opacity: 0.2;
-    height: 120%;
+    height: 100%;
     max-width: none;
   }
 
@@ -613,7 +600,7 @@ const ImageColumn = styled(Comp.Column)`
     color: #fff;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
     margin-bottom: 0;
     padding: 1rem;

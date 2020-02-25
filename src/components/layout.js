@@ -22,9 +22,9 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <link
-          href="https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap"
+          href="https://fonts.googleapis.com/css?family=Work+Sans:400,500&display=swap"
           rel="stylesheet"
-        ></link>
+        />
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <MainWrapper>

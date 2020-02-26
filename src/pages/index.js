@@ -221,7 +221,7 @@ const IndexPage = () => (
 
     <Clientes>
       <Comp.Width75 style={{ paddingBottom: "2rem" }}>
-        <p style={{ textAlign: "center" }}>
+        <p style={{ textAlign: "center", color: theme.colors.primaryColor }}>
           Nuestra cartera de clientes está formada por instituciones
           financieras, firmas legales internacionales con presencia en México,
           empresas <i>Oil & Gas</i>, entre otros.

@@ -60,7 +60,9 @@ const IndexPage = () => (
       </ParticleContainer>
       <Comp.Container>
         <HeroContent>
-          <h1>Traducciones de carácter técnico para empresas</h1>
+          <h1 style={{ color: theme.colors.primaryColor }}>
+            Traducciones de carácter técnico para empresas
+          </h1>
           <p>
             Nos enfocamos en traducciones de documentos de carácter técnico
             utilizando tecnología lingüística e involucrando a expertos en cada
@@ -233,7 +235,7 @@ const IndexPage = () => (
             <IconContainer>
               <img src={BursatilImage} />
             </IconContainer>
-            <p>Bursatil</p>
+            <p>Bursátil</p>
           </ImageColumn>
           <ImageColumn>
             <IconContainer>
@@ -271,7 +273,7 @@ const IndexPage = () => (
             <IconContainer>
               <img src={MedicoImage} />
             </IconContainer>
-            <p>Medico</p>
+            <p>Médico</p>
           </ImageColumn>
           <ImageColumn>
             <IconContainer>
@@ -283,7 +285,7 @@ const IndexPage = () => (
             <IconContainer>
               <img src={InformaticaImage} />
             </IconContainer>
-            <p>Informatica</p>
+            <p>Informática</p>
           </ImageColumn>
           <ImageColumn>
             <IconContainer>
@@ -515,9 +517,6 @@ export const HeroContent = styled(Comp.Column)`
       font-size: 54px;
       color: ${theme.colors.bodyColor};
       text-shadow: 0 4px 4px rgba(2, 77, 190, 0.1);
-    }
-    p {
-      opacity: 0.5;
     }
   }
 `;

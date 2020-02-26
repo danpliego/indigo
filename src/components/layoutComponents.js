@@ -144,10 +144,8 @@ export const BackgroundImageContainer = styled.div`
 `;
 
 const sharedSectionTitle = css`
-  letter-spacing: 3px;
-  text-transform: uppercase;
   position: relative;
-  font-size: 1rem;
+  font-size: 1.5rem;
   display: inline-flex;
   margin-bottom: 3.5rem;
 
@@ -163,9 +161,10 @@ const sharedSectionTitle = css`
 
 export const SectionTitle = styled.h2`
   ${sharedSectionTitle}
+  color: ${theme.colors.primaryColor};
 
   &:after {
-    background: ${theme.colors.bodyColor};
+    background: ${theme.colors.primaryColor};
   }
 `;
 

@@ -9,9 +9,9 @@ import { theme } from "../components/theme";
 import Logo from "../images/logo.png";
 
 import NosotrosImage from "../images/nosotros.jpg";
-import ServiciosImage from "../images/satelite.jpeg";
 import TraductoresImage from "../images/buques.jpeg";
 import MiguelImage from "../images/miguel.png";
+import MiguelBG from "../images/bg-miguel.png";
 import ConfidencialidadImage from "../images/soumaya.jpeg";
 
 import BursatilImage from "../images/servicios/bursatil.jpg";
@@ -52,11 +52,14 @@ const IndexPage = () => (
       </Comp.Container>
     </Hero>
 
-    <div style={{ background: "#fff" }}>
+    <div style={{ background: theme.colors.primaryColor }}>
       <Comp.Width75>
         <p
-          style={{ textAlign: "center", fontSize: "28px", fontWeight: "bold" }}
-          className="playfair-display"
+          style={{
+            textAlign: "center",
+            fontSize: "28px",
+            color: theme.colors.secondaryColor
+          }}
         >
           Nuestra intención es ser un aliado de su organización proporcionándole
           un servicio de traducción profesional, ágil y confiable.
@@ -67,81 +70,90 @@ const IndexPage = () => (
     <Nosotros id="nosotros">
       <Comp.Container>
         <Comp.Width75 style={{ padding: "0" }}>
-          <Comp.TextCenter>
-            <Comp.SectionTitleInverse>Nosotros</Comp.SectionTitleInverse>
-            <p>
-              Indigo Translations fue fundado en Mayo de 2019 en la Ciudad de
-              México por el Lic. Miguel Burle. Miguel fundó Indigo Translations
-              al percatarse que la accesibilidad a un contenido en diversos
-              idiomas se ha convertido en un elemento esencial para la industria
-              internacional.
-            </p>
-          </Comp.TextCenter>
-          <MiguelSection mobile>
-            <MiguelPhoto>
-              <img src={MiguelImage} width="230px" />
-              <p
-                style={{
-                  marginTop: "2rem",
-                  fontSize: "1rem",
-                  textAlign: "center"
-                }}
-                className="playfair-display"
-              >
-                <strong>Miguel Burle</strong>
-                <br />
-                Director General
-              </p>
-            </MiguelPhoto>
-            <Comp.Column style={{ flex: "1" }}>
-              <p className="playfair-display">
-                Previo a fundar Indigo Translations Miguel laboró
-                aproximadamente 8 años en una prestigiosa firma legal en la
-                Ciudad de México en donde participó en la negociación y asesoría
-                en fusiones, adquisiciones, joint ventures, escisiones y
-                liquidaciones, representando a empresas nacionales,
-                internacionales, fondos de capital privado y fondos de capital
-                de riesgo así como en la preparación de documentación
-                transaccional para diversas industrias.
-                <br />
-                <br />
-                <strong>
-                  Las raíces de Indigo Translations se encuentran profundamente
-                  en la investigación académica y la industria legal.
-                </strong>
-              </p>
-            </Comp.Column>
-          </MiguelSection>
+          <NosotrosContent>
+            <Comp.Row mobile padded style={{ alignItems: "center" }}>
+              <Comp.Column style={{ paddingRight: "3rem" }}>
+                <Comp.SectionTitle>Nosotros</Comp.SectionTitle>
+              </Comp.Column>
+              <Comp.Column>
+                <p>
+                  Indigo Translations fue fundado en Mayo de 2019 en la Ciudad
+                  de México por el Lic. Miguel Burle. Miguel fundó Indigo
+                  Translations al percatarse que la accesibilidad a un contenido
+                  en diversos idiomas se ha convertido en un elemento esencial
+                  para la industria internacional.
+                </p>
+              </Comp.Column>
+            </Comp.Row>
+          </NosotrosContent>
         </Comp.Width75>
       </Comp.Container>
     </Nosotros>
-    <Servicios>
-      <Comp.Row mobile>
-        <Comp.Column style={{ flex: "1" }}>
-          <ServiciosContent>
-            <p>
-              <strong>
-                Indigo Translations ofrece servicios de idiomas y soluciones
-                técnicas de calidad en México.
+    <MiguelSection mobile>
+      <Comp.Width75>
+        <Comp.Row>
+          <MiguelPhoto>
+            <img src={MiguelImage} width="230px" />
+            <p
+              style={{
+                marginTop: "2rem",
+                fontSize: "1rem",
+                textAlign: "center"
+              }}
+            >
+              <strong
+                style={{
+                  color: theme.colors.secondaryColor,
+                  fontSize: "1.5rem"
+                }}
+              >
+                Miguel Burle
               </strong>
               <br />
-              <br />
-              Si es que usted se puso en contacto con nosotros para enfrentar la
-              internacionalización, la comunicación efectiva entre los miembros
-              de su organización o la comprensión de contenido, nuestro equipo
-              podrá adaptarse a sus necesidades, tiempos de entrega y demás
-              particularidades que le puedan surgir en el día a día. <br />
-              <br />
-              Indigo Translations ofrece servicios de traducción de alta calidad
-              con el objetivo de ser su aliado en esta era digital y apoyarlo en
-              crecer el capital lingüístico de su organización.
+              Director General
             </p>
-          </ServiciosContent>
-        </Comp.Column>
-        <ServiciosImageContainer>
-          <img src={ServiciosImage} />
-        </ServiciosImageContainer>
-      </Comp.Row>
+          </MiguelPhoto>
+          <Comp.Column style={{ flex: "1" }}>
+            <p className="playfair-display">
+              Previo a fundar Indigo Translations Miguel laboró aproximadamente
+              8 años en una prestigiosa firma legal en la Ciudad de México en
+              donde participó en la negociación y asesoría en fusiones,
+              adquisiciones, joint ventures, escisiones y liquidaciones,
+              representando a empresas nacionales, internacionales, fondos de
+              capital privado y fondos de capital de riesgo así como en la
+              preparación de documentación transaccional para diversas
+              industrias.
+              <br />
+              <br />
+              <strong>
+                Las raíces de Indigo Translations se encuentran profundamente en
+                la investigación académica y la industria legal.
+              </strong>
+            </p>
+          </Comp.Column>
+        </Comp.Row>
+      </Comp.Width75>
+    </MiguelSection>
+    <Servicios>
+      <ServiciosContent>
+        <p>
+          <strong>
+            Indigo Translations ofrece servicios de idiomas y soluciones
+            técnicas de calidad en México.
+          </strong>
+          <br />
+          <br />
+          Si es que usted se puso en contacto con nosotros para enfrentar la
+          internacionalización, la comunicación efectiva entre los miembros de
+          su organización o la comprensión de contenido, nuestro equipo podrá
+          adaptarse a sus necesidades, tiempos de entrega y demás
+          particularidades que le puedan surgir en el día a día. <br />
+          <br />
+          Indigo Translations ofrece servicios de traducción de alta calidad con
+          el objetivo de ser su aliado en esta era digital y apoyarlo en crecer
+          el capital lingüístico de su organización.
+        </p>
+      </ServiciosContent>
     </Servicios>
 
     <Comp.Row mobile>
@@ -432,7 +444,7 @@ export const Hero = styled.div`
 `;
 
 export const HeroContent = styled(Comp.Column)`
-  padding: 5rem 0;
+  padding: 10rem 0 14rem;
   min-height: 60vh;
   display: flex;
   justify-content: center;
@@ -454,6 +466,7 @@ export const HeroContent = styled(Comp.Column)`
 const Nosotros = styled(Comp.BackgroundImageContainer)`
   background-image: url(${NosotrosImage});
   position: relative;
+  min-height: 700px;
 
   h2,
   p {
@@ -473,14 +486,33 @@ const Nosotros = styled(Comp.BackgroundImageContainer)`
   }
 `;
 
-const MiguelSection = styled(Comp.Row)`
-  background-color: #000;
+const NosotrosContent = styled.div`
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem 4rem;
+  z-index: 1;
+  position: relative;
+  margin-top: -8.5rem;
+
+  p {
+    color: ${theme.colors.bodyColor};
+    text-shadow: none !important;
+  }
+`;
+
+const MiguelSection = styled.div`
+  background-image: url(${MiguelBG});
+  padding-top: 8rem;
   border-bottom: 7px solid ${theme.colors.primaryColor};
-  margin-top: 6rem;
-  padding: 3rem;
   color: #fff;
   position: relative;
   z-index: 1;
+  margin-top: -17rem;
+
+  p {
+    margin-top: 2rem;
+    font-weight: 100;
+  }
 
   @media ${theme.breakpoint.onlyMobile} {
     text-align: center;
@@ -494,13 +526,12 @@ const MiguelPhoto = styled(Comp.Column)`
 `;
 
 const Servicios = styled.div`
-  margin-top: -20rem;
-  background: #fff;
+  background: #000;
   border-top: 10px solid #fff;
   position: relative;
 `;
 
-const ServiciosContent = styled.div`
+const ServiciosContent = styled(NosotrosContent)`
   padding: 20rem 10% 6rem;
 `;
 
@@ -525,32 +556,6 @@ const GridImage = styled(Comp.Column)`
 const GridContent = styled.div`
   padding: 6rem 10% 6rem;
   flex: 1;
-`;
-
-const ServiciosImageContainer = styled(Comp.Column)`
-  @media ${theme.breakpoint.upFromMobile} {
-    flex: 1;
-    overflow: hidden;
-    position: relative;
-
-    img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: auto;
-      max-width: none;
-    }
-  }
-
-  @media ${theme.breakpoint.onlyMobile} {
-    height: 300px;
-    overflow: hidden;
-
-    img {
-      margin-top: -150px;
-    }
-  }
 `;
 
 const ImageRow = styled(Comp.Row)`

@@ -1,11 +1,7 @@
-// Customize this 'myform.js' script and add it to your JS bundle.
-// Then import it with 'import MyForm from "./myform.js"'.
-// Finally, add a <MyForm/> element whereever you wish to display the form.
-
 import React from "react";
 import { ButtonPrimary } from "./layoutComponents";
 
-export default class CorporativosForm extends React.Component {
+export default class MyForm extends React.Component {
   constructor(props) {
     super(props);
     this.submitForm = this.submitForm.bind(this);
@@ -19,31 +15,34 @@ export default class CorporativosForm extends React.Component {
     return (
       <form
         onSubmit={this.submitForm}
-        action="https://formspree.io/mzbrbpyp"
+        action="https://formspree.io/xyyjwvay"
         method="POST"
       >
         <input
-          className="form-control"
           type="text"
           name="nombre"
           placeholder="Nombre"
+          className="form-control"
         />
         <input
-          className="form-control"
           type="text"
           name="telefono"
-          placeholder="Correo electrónico"
+          placeholder="Teléfono"
+          className="form-control"
         />
         <input
+          type="email"
+          name="email"
+          placeholder="Email"
           className="form-control"
-          type="text"
-          name="descripcion"
+        />
+        <textarea
+          name="message"
+          className="form-control"
           placeholder="Mensaje"
         />
         {status === "SUCCESS" ? (
-          <p style={{ padding: "1rem", textAlign: "center" }}>
-            Gracias! Tu descarga está por iniciar
-          </p>
+          <p>Gracias! Pronto nos pondremos en contacto contigo.</p>
         ) : (
           <ButtonPrimary>Enviar</ButtonPrimary>
         )}

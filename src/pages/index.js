@@ -49,10 +49,10 @@ const IndexPage = () => (
                 value: 5
               },
               color: {
-                value: "#454FBA"
+                value: "#4262c5"
               },
               line_linked: {
-                color: "#454FBA"
+                color: "#4262c5"
               }
             }
           }}
@@ -75,7 +75,7 @@ const IndexPage = () => (
         <p
           style={{
             textAlign: "center",
-            color: theme.colors.secondaryColor
+            color: theme.colors.whiteColor
           }}
         >
           Nuestra intención es ser un aliado de su organización proporcionándole
@@ -110,7 +110,9 @@ const IndexPage = () => (
       <Comp.Width75>
         <Comp.Row mobile>
           <MiguelPhoto>
-            <img src={MiguelImage} width="230px" />
+            <a href="https://www.linkedin.com/in/miguel-burle-coria-11169259/">
+              <img src={MiguelImage} width="230px" />
+            </a>
             <p
               style={{
                 marginTop: "2rem",
@@ -120,7 +122,6 @@ const IndexPage = () => (
             >
               <strong
                 style={{
-                  color: theme.colors.secondaryColor,
                   fontSize: "1.5rem"
                 }}
               >
@@ -157,16 +158,16 @@ const IndexPage = () => (
           params={{
             particles: {
               number: {
-                value: 150
+                value: 100
               },
               size: {
                 value: 5
               },
               color: {
-                value: "#A2E9E9"
+                value: "#4262c5"
               },
               line_linked: {
-                color: "#A2E9E9"
+                color: "#4262c5"
               }
             }
           }}
@@ -174,7 +175,7 @@ const IndexPage = () => (
       </ParticleContainer>
       <Comp.Width75>
         <ServiciosContent>
-          <p>
+          <p style={{ color: theme.colors.primaryColor }}>
             <strong>
               Indigo Translations ofrece servicios de idiomas y soluciones
               técnicas de calidad en México.
@@ -203,7 +204,7 @@ const IndexPage = () => (
         >
           <p
             style={{
-              color: theme.colors.secondaryColor,
+              color: theme.colors.whiteColor,
               textAlign: "center"
             }}
           >
@@ -450,7 +451,7 @@ const IndexPage = () => (
             <a href="/">
               <img src={Logo} width="160" />
             </a>
-            <p style={{ margin: "2rem 0" }}>
+            <p style={{ margin: "2rem 0", color: theme.colors.primaryColor }}>
               Póngase en contacto con nuestro equipo.
             </p>
             <Comp.Row style={{ marginBottom: "2rem", alignItems: "center" }}>
@@ -512,7 +513,7 @@ export const HeroContent = styled(Comp.Column)`
     h1 {
       margin-bottom: 2rem;
       font-size: 54px;
-      color: ${theme.colors.primaryColor};
+      color: ${theme.colors.bodyColor};
       text-shadow: 0 4px 4px rgba(2, 77, 190, 0.1);
     }
     p {
@@ -606,7 +607,7 @@ const MiguelPhoto = styled(Comp.Column)`
 `;
 
 const Servicios = styled.div`
-  background: #000;
+  background: #f9f9f9;
   border-top: 10px solid #fff;
   position: relative;
 `;

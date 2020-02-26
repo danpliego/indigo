@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Link } from "gatsby";
 import { theme } from "./theme";
 
 export const MainWrapper = styled.div`
@@ -67,7 +66,7 @@ const sharedButton = css`
   }
 `;
 
-export const ButtonPrimary = styled(Link)`
+export const ButtonPrimary = styled.button`
   ${sharedButton}
   border-color: ${props => props.theme.colors.primaryColor};
   background: ${props => props.theme.colors.primaryColor};

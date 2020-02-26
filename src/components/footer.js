@@ -9,6 +9,7 @@ const Footer = () => (
       <Comp.Row mobile>
         <Comp.Column>
           <Comp.Row
+            mobile
             style={{
               justifyContent: "center",
               padding: "2rem"
@@ -39,6 +40,15 @@ const FooterContainer = styled.footer`
   a {
     color: #fff !important;
   }
+
+  @media ${theme.breakpoint.onlyMobile} {
+    text-align: center;
+
+    a {
+      margin-bottom: 1rem;
+      display: block;
+    }
+  }
 `;
 
 const BodyFooter = styled(Comp.Column)`
@@ -46,6 +56,11 @@ const BodyFooter = styled(Comp.Column)`
   padding: 2rem;
   text-align: right;
   flex: 1;
+
+  @media ${theme.breakpoint.onlyMobile} {
+    text-align: center;
+    padding-top: 0;
+  }
 `;
 
 export default Footer;

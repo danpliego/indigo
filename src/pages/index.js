@@ -49,12 +49,11 @@ const IndexPage = () => (
       </Comp.Container>
     </Hero>
 
-    <div style={{ background: theme.colors.primaryColor }}>
+    <AfterHero style={{ background: theme.colors.primaryColor }}>
       <Comp.Width75>
         <p
           style={{
             textAlign: "center",
-            fontSize: "28px",
             color: theme.colors.secondaryColor
           }}
         >
@@ -62,14 +61,14 @@ const IndexPage = () => (
           un servicio de traducción profesional, ágil y confiable.
         </p>
       </Comp.Width75>
-    </div>
+    </AfterHero>
 
     <Nosotros id="nosotros">
       <Comp.Container>
         <Comp.Width75 style={{ padding: "0" }}>
           <NosotrosContent>
             <Comp.Row mobile padded style={{ alignItems: "center" }}>
-              <Comp.Column style={{ paddingRight: "3rem" }}>
+              <Comp.Column>
                 <Comp.SectionTitle>Nosotros</Comp.SectionTitle>
               </Comp.Column>
               <Comp.Column>
@@ -86,9 +85,9 @@ const IndexPage = () => (
         </Comp.Width75>
       </Comp.Container>
     </Nosotros>
-    <MiguelSection mobile>
+    <MiguelSection>
       <Comp.Width75>
-        <Comp.Row>
+        <Comp.Row mobile>
           <MiguelPhoto>
             <img src={MiguelImage} width="230px" />
             <p
@@ -163,7 +162,6 @@ const IndexPage = () => (
         >
           <p
             style={{
-              fontSize: "28px",
               color: theme.colors.secondaryColor,
               textAlign: "center"
             }}
@@ -181,7 +179,7 @@ const IndexPage = () => (
 
     <Clientes>
       <Comp.Width75 style={{ paddingBottom: "2rem" }}>
-        <p style={{ textAlign: "center", fontSize: "28px" }}>
+        <p style={{ textAlign: "center" }}>
           Nuestra cartera de clientes está formada por instituciones
           financieras, firmas legales internacionales con presencia en México,
           empresas <i>Oil & Gas</i>, entre otros.
@@ -278,7 +276,7 @@ const IndexPage = () => (
             de brindar un servicio de traducción ágil y confiable.
           </p>
         </Comp.TextCenter>
-        <Comp.Row>
+        <Comp.Row mobile>
           <ProcessStep>
             <Comp.Column>
               <CircleImage>
@@ -337,7 +335,7 @@ const IndexPage = () => (
             <h5>Traducción por una especialista</h5>
           </ProcessStep>
         </Comp.Row>
-        <Comp.Row style={{ justifyContent: "center" }}>
+        <Comp.Row mobile style={{ justifyContent: "center" }}>
           <ProcessStep>
             <Comp.Column>
               <CircleImage>
@@ -462,12 +460,13 @@ export const Hero = styled.div`
 `;
 
 export const HeroContent = styled(Comp.Column)`
-  padding: 10rem 0 14rem;
+  padding: 4rem 0 6rem;
   min-height: 60vh;
   display: flex;
   justify-content: center;
 
   @media ${theme.breakpoint.upFromMobile} {
+    padding: 10rem 0 14rem;
     width: 50%;
     h1 {
       margin-bottom: 2rem;
@@ -477,6 +476,16 @@ export const HeroContent = styled(Comp.Column)`
     }
     p {
       opacity: 0.5;
+    }
+  }
+`;
+
+const AfterHero = styled.div`
+  p {
+    font-size: 18px;
+
+    @media ${theme.breakpoint.upFromMobile} {
+      font-size: 28px;
     }
   }
 `;
@@ -507,10 +516,19 @@ const Nosotros = styled(Comp.BackgroundImageContainer)`
 const NosotrosContent = styled.div`
   background: #fff;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
-  padding: 3rem 4rem;
+  padding: 3rem;
   z-index: 1;
   position: relative;
-  margin-top: -8.5rem;
+  margin-top: -5rem;
+
+  @media ${theme.breakpoint.upFromMobile} {
+    padding: 3rem 4rem;
+    margin-top: -8.5rem;
+
+    h2 {
+      margin-right: 3rem;
+    }
+  }
 
   p {
     color: ${theme.colors.bodyColor};
@@ -521,7 +539,6 @@ const NosotrosContent = styled.div`
 const MiguelSection = styled.div`
   background-image: url(${MiguelBG});
   padding-top: 8rem;
-  border-bottom: 7px solid ${theme.colors.primaryColor};
   color: #fff;
   position: relative;
   z-index: 1;
@@ -534,6 +551,10 @@ const MiguelSection = styled.div`
 
   @media ${theme.breakpoint.onlyMobile} {
     text-align: center;
+    background-size: cover;
+    p {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -550,17 +571,29 @@ const Servicios = styled.div`
 `;
 
 const ServiciosContent = styled(NosotrosContent)`
-  padding: 4rem;
+  @media ${theme.breakpoint.upFromMobile} {
+    padding: 4rem;
+
+    p {
+      font-size: 28px;
+    }
+  }
 `;
 
 const GridContent = styled.div`
-  padding: 6rem 10% 6rem;
+  padding: 2rem;
+  @media ${theme.breakpoint.upFromMobile} {
+    padding: 6rem 10% 6rem;
+  }
   flex: 1;
 `;
 
 const ImageRow = styled(Comp.Row)`
   flex-wrap: wrap;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
+  @media ${theme.breakpoint.upFromMobile} {
+    padding-bottom: 6rem;
+  }
 `;
 
 const ImageColumn = styled(Comp.Column)`
@@ -654,16 +687,30 @@ const ProcessStep = styled(Comp.Column)`
 const Confidencialidad = styled.div`
   background-image: url(${ConfidencialidadBG});
   background-size: cover;
-  padding-top: 8rem;
   margin-top: -12rem;
+  padding-top: 2rem;
+
+  @media ${theme.breakpoint.upFromMobile} {
+    padding-top: 8rem;
+  }
 `;
 
 const Clientes = styled.div`
   background: #fff;
-  margin-top: -13rem;
   z-index: 1;
   position: relative;
-  padding-top: 7rem;
+  padding-top: 2rem;
+
+  margin-top: -5rem;
+
+  @media ${theme.breakpoint.upFromMobile} {
+    margin-top: -13rem;
+    padding-top: 7rem;
+
+    p {
+      font-size: 28px;
+    }
+  }
 `;
 
 const Contacto = styled.div`

@@ -647,6 +647,7 @@ const ImageColumn = styled(Comp.Column)`
   max-width: 16.6666667%;
   flex-wrap: wrap;
   cursor: pointer;
+  padding: 1rem;
 
   @media (max-width: 992px) {
     flex: 0 0 25%;
@@ -673,7 +674,7 @@ const ImageColumn = styled(Comp.Column)`
 
   p {
     z-index: 1;
-    font-size: 18px;
+    font-size: 16px !important;
     margin-bottom: 0;
     padding: 1rem 0;
     color: ${theme.colors.primaryColor};

@@ -632,16 +632,16 @@ export const GlobalStyle = createGlobalStyle`
 
   .form-control {
     border: 0;
-    background: rgba(255, 255, 255,.05);
+    background: rgba(0, 0, 0,.05);
     padding: 1rem;
     width: 100%;
     margin-bottom: 1rem;
     outline: 0;
     transition: all 0.33s ease-in-out;
-    color: #fff;
+    color: #000;
 
     &::placeholder {
-      color: #fff;
+      color: #333;
     }
 
     &:focus {

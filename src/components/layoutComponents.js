@@ -69,9 +69,13 @@ const sharedButton = css`
 
 export const ButtonPrimary = styled(Link)`
   ${sharedButton}
-  border-color: ${props => props.theme.colors.whiteColor};
-  background: ${props => props.theme.colors.whiteColor};
-  color: ${props => props.theme.colors.primaryColor};
+  border-color: ${props => props.theme.colors.primaryColor};
+  background: ${props => props.theme.colors.primaryColor};
+  color: ${props => props.theme.colors.whiteColor};
+
+  &:hover {
+    text-decoration: none;
+  }
 `;
 
 export const FlexContainer = styled.div`

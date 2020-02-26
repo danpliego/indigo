@@ -5,6 +5,7 @@ import * as Comp from "../components/layoutComponents";
 import SEO from "../components/seo";
 import styled from "styled-components";
 import { theme } from "../components/theme";
+import Particles from "react-particles-js";
 
 import Logo from "../images/logo.png";
 
@@ -37,6 +38,26 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Hero>
+      <ParticleContainer>
+        <Particles
+          params={{
+            particles: {
+              number: {
+                value: 100
+              },
+              size: {
+                value: 5
+              },
+              color: {
+                value: "#454FBA"
+              },
+              line_linked: {
+                color: "#454FBA"
+              }
+            }
+          }}
+        />
+      </ParticleContainer>
       <Comp.Container>
         <HeroContent>
           <h1>Traducciones de carácter técnico para empresas</h1>
@@ -131,6 +152,26 @@ const IndexPage = () => (
       </Comp.Width75>
     </MiguelSection>
     <Servicios>
+      <ParticleContainer>
+        <Particles
+          params={{
+            particles: {
+              number: {
+                value: 150
+              },
+              size: {
+                value: 5
+              },
+              color: {
+                value: "#A2E9E9"
+              },
+              line_linked: {
+                color: "#A2E9E9"
+              }
+            }
+          }}
+        />
+      </ParticleContainer>
       <Comp.Width75>
         <ServiciosContent>
           <p>
@@ -466,7 +507,7 @@ export const HeroContent = styled(Comp.Column)`
   justify-content: center;
 
   @media ${theme.breakpoint.upFromMobile} {
-    padding: 10rem 0 14rem;
+    padding: 8rem 0 10rem;
     width: 50%;
     h1 {
       margin-bottom: 2rem;
@@ -575,7 +616,7 @@ const ServiciosContent = styled(NosotrosContent)`
     padding: 4rem;
 
     p {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
 `;
@@ -715,4 +756,15 @@ const Clientes = styled.div`
 
 const Contacto = styled.div`
   background: #fff;
+`;
+
+const ParticleContainer = styled.div`
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+
+  > div {
+    height: 100%;
+  }
 `;

@@ -655,7 +655,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
 
     @media ${theme.breakpoint.onlyMobile} {
       font-size: 18px;

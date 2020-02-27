@@ -438,7 +438,7 @@ const IndexPage = () => (
           </p>
         </Comp.TextCenter>
       </Comp.Width75>
-      <Comp.Row mobile>
+      <Comp.Row mobile style={{ justifyContent: "center" }}>
         <ProcessStep>
           <Comp.Column>
             <CircleImage>
@@ -798,7 +798,7 @@ const IconContainer = styled(CircleImage)`
   height: 8rem;
   border-radius: 8rem;
   margin-right: 0;
-  background: ${theme.colors.secondaryColor};
+  background: none;
 `;
 
 const Proceso = styled.div`

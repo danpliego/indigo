@@ -78,7 +78,7 @@ const IndexPage = () => (
             color: theme.colors.whiteColor
           }}
         >
-          Tenemos como objetivo es ser un aliado de su organización
+          Tenemos como objetivo ser un aliado de su organización
           proporcionándole un servicio de traducción profesional, ágil y
           confiable.
         </h1>

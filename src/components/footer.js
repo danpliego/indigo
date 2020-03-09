@@ -16,10 +16,22 @@ const Footer = () => (
             }}
           >
             <Comp.Column style={{ borderRight: "1px solid #222" }} padded>
-              <a href="#">Aviso de privacidad</a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://docs.google.com/document/d/1iy8UZO0TeTTODPzhKQfdP_kf86JyRrC0hul41roZrP0/edit?usp=sharing"
+              >
+                Aviso de privacidad
+              </a>
             </Comp.Column>
             <Comp.Column padded>
-              <a href="#">Liberación de Responsabilidad</a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/file/d/0B8uG5MOKcEygWXByMlVaTV94Y2hwRTExRUhtY21mR2lNRmpj/view?usp=sharing"
+              >
+                Liberación de Responsabilidad
+              </a>
             </Comp.Column>
           </Comp.Row>
         </Comp.Column>

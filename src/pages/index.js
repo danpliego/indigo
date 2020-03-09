@@ -213,12 +213,9 @@ const IndexPage = () => (
               textAlign: "center"
             }}
           >
-            Los miembros del equipo de traductores de Indigo Translations están
-            graduados de las más prestigiosas universidades en México y cuentan
-            con años de especialización y experiencia en su respectiva materia.
-            Asimismo, nuestro equipo incluye peritos traductores autorizados por
-            el Tribunal Superior de Justicia de la Ciudad de México y el resto
-            de las entidades federativas del país.
+            Nuestro equipo incluye peritos traductores autorizados por el
+            Tribunal Superior de Justicia de la Ciudad de México y el resto de
+            las entidades federativas del país.
           </p>
         </ServiciosContent>
       </Comp.Width75>

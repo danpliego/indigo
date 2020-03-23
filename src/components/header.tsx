@@ -45,9 +45,6 @@ export const Header: React.FC = () => {
           <CollapsableMenu flex={1} isOpen={openMenu}>
             <Menu>
               <MenuItem>
-                <a href="tel:525582330531">+52 1 55 8233 0531</a>
-              </MenuItem>
-              <MenuItem>
                 <a href="#contacto" className="primary">
                   CONTÁCTANOS
                 </a>

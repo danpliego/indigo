@@ -32,8 +32,6 @@ import IconEmail from "../images/icons/email.svg";
 
 import CorporativosForm from "../components/corporativos_form.js";
 
-import Slider from "infinite-react-carousel";
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -167,7 +165,7 @@ const IndexPage = () => (
                 value: 5
               },
               color: {
-                value: "#C54261"
+                value: "#A2E9E9"
               },
               opacity: {
                 value: 0.9
@@ -193,12 +191,11 @@ const IndexPage = () => (
             comunicación efectiva entre los miembros de su organización o la
             comprensión de contenido, nuestro equipo podrá adaptarse a sus
             necesidades, tiempos de entrega y demás particularidades que le
-            puedan surgir en el día a día.
+            puedan surgir en el día a día. <br />
             <br />
-            <br />
-            Nuestro equipo incluye peritos traductores autorizados por el
-            Tribunal Superior de Justicia de la Ciudad de México y el resto de
-            las entidades federativas del país.
+            Indigo Translations ofrece servicios de traducción de alta calidad
+            con el objetivo de ser su aliado en esta era digital y apoyarlo en
+            crecer el capital lingüístico de su organización.
           </p>
         </ServiciosContent>
       </Comp.Width75>
@@ -210,41 +207,16 @@ const IndexPage = () => (
             position: "relative"
           }}
         >
-          <CarouselContainer>
-            <Slider autoplay>
-              <div>
-                <h3 className="expanded">
-                  MyBusiness POS me ayuda a controlar inventarios, medir las
-                  ventas del día y llevar un registro del dinero. En pocas
-                  palabras, nos ayuda a vender mejor
-                </h3>
-                <h6>Javier Sánchez Navarrete propietario de Súper 24</h6>
-              </div>
-              <div>
-                <h3 className="expanded">
-                  Con MyBusiness POS llevo un mejor control y me ayuda a
-                  agilizar el proceso de venta gracias a la simpleza en la
-                  interfaz del punto de venta.
-                </h3>
-                <h6>Angie Durán propietaria de Ferremas México</h6>
-              </div>
-              <div>
-                <h3 className="expanded">
-                  MyBusiness POS es la columna vertebral de mi negocio, con el
-                  controlo, programo, superviso y administro todo de forma
-                  rápida y sencilla.
-                </h3>
-                <h6>Aurelio Arratia propietario de Lechería Victoria</h6>
-              </div>
-              <div>
-                <h3 className="expanded">
-                  MyBusiness POS me ha ayudado a desarrollar oportunidades de
-                  negocio en áreas de comercio al por mayor.
-                </h3>
-                <h6>Gustavo Mendoza propietario de IntegraBits</h6>
-              </div>
-            </Slider>
-          </CarouselContainer>
+          <p
+            style={{
+              color: theme.colors.whiteColor,
+              textAlign: "center"
+            }}
+          >
+            Nuestro equipo incluye peritos traductores autorizados por el
+            Tribunal Superior de Justicia de la Ciudad de México y el resto de
+            las entidades federativas del país.
+          </p>
         </ServiciosContent>
       </Comp.Width75>
     </Servicios>
@@ -343,7 +315,7 @@ const IndexPage = () => (
           params={{
             particles: {
               number: {
-                value: 100,
+                value: 355,
                 density: {
                   enable: true,
                   value_area: 789.1476416322727
@@ -388,7 +360,7 @@ const IndexPage = () => (
                 }
               },
               line_linked: {
-                enable: true,
+                enable: false,
                 distance: 150,
                 color: "#A0B0E2",
                 opacity: 0.4,
@@ -396,7 +368,7 @@ const IndexPage = () => (
               },
               move: {
                 enable: true,
-                speed: 1,
+                speed: 0.2,
                 direction: "none",
                 random: true,
                 straight: false,
@@ -455,7 +427,7 @@ const IndexPage = () => (
       <Comp.Width75 style={{ paddingBottom: "0" }}>
         <Comp.TextCenter>
           <Comp.SectionTitle>Proceso</Comp.SectionTitle>
-          <p style={{ fontSize: "1.25rem" }}>
+          <p>
             Indigo Translations utiliza análisis de lenguaje y tecnología
             lingüística avanzada mejor conocida como CAT (Computer-assisted
             translation) e involucra a expertos en cada materia con el objetivo
@@ -745,7 +717,7 @@ const Servicios = styled.div`
 
 const ServiciosContent = styled(NosotrosContent)`
   @media ${theme.breakpoint.upFromMobile} {
-    padding: 4rem 2rem;
+    padding: 4rem;
 
     p {
       font-size: 20px;
@@ -894,81 +866,5 @@ const ParticleContainer = styled.div`
 
   > div {
     height: 100%;
-  }
-`;
-
-const CarouselContainer = styled.div`
-  div {
-    text-align: center;
-  }
-
-  h3,
-  h6 {
-    color: #fff;
-    max-width: 70%;
-    margin: 1rem auto;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  .carousel-arrow {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff !important;
-
-    &:before {
-      font-size: 1rem;
-      display: block;
-      background: none;
-      padding-top: 9px;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-  }
-
-  .carousel-next {
-    right: 2rem;
-    top: 4rem;
-  }
-
-  .carousel-prev {
-    left: 2rem;
-    top: 4rem;
-  }
-
-  .carousel-next:before {
-    content: ">";
-  }
-
-  .carousel-prev:before {
-    content: "<";
-  }
-
-  @media ${theme.breakpoint.onlyMobile} {
-    h3 {
-      font-size: 1rem;
-    }
-
-    .carousel-arrow {
-      color: #000 !important;
-      background: #fff;
-      width: 2rem;
-      height: 2rem;
-
-      &:before {
-        font-size: 0.8rem;
-      }
-
-      &.carousel-next {
-        right: 1rem;
-      }
-
-      &.carousel-prev {
-        left: 1rem;
-      }
-    }
   }
 `;

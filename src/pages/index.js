@@ -32,8 +32,6 @@ import IconEmail from "../images/icons/email.svg";
 
 import CorporativosForm from "../components/corporativos_form.js";
 
-import Slider from "infinite-react-carousel";
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -167,10 +165,10 @@ const IndexPage = () => (
                 value: 5
               },
               color: {
-                value: "#C54261"
+                value: "#A0B0E2"
               },
               opacity: {
-                value: 0.9
+                value: 1
               },
               line_linked: {
                 color: "#A0B0E2"
@@ -202,52 +200,34 @@ const IndexPage = () => (
           </p>
         </ServiciosContent>
       </Comp.Width75>
-      <Comp.Width75>
-        <ServiciosContent
-          style={{
-            background: theme.colors.primaryColor,
-            zIndex: "2",
-            position: "relative"
-          }}
-        >
-          <CarouselContainer>
-            <Slider autoplay>
-              <div>
-                <h3 className="expanded">
-                  MyBusiness POS me ayuda a controlar inventarios, medir las
-                  ventas del día y llevar un registro del dinero. En pocas
-                  palabras, nos ayuda a vender mejor
-                </h3>
-                <h6>Javier Sánchez Navarrete propietario de Súper 24</h6>
-              </div>
-              <div>
-                <h3 className="expanded">
-                  Con MyBusiness POS llevo un mejor control y me ayuda a
-                  agilizar el proceso de venta gracias a la simpleza en la
-                  interfaz del punto de venta.
-                </h3>
-                <h6>Angie Durán propietaria de Ferremas México</h6>
-              </div>
-              <div>
-                <h3 className="expanded">
-                  MyBusiness POS es la columna vertebral de mi negocio, con el
-                  controlo, programo, superviso y administro todo de forma
-                  rápida y sencilla.
-                </h3>
-                <h6>Aurelio Arratia propietario de Lechería Victoria</h6>
-              </div>
-              <div>
-                <h3 className="expanded">
-                  MyBusiness POS me ha ayudado a desarrollar oportunidades de
-                  negocio en áreas de comercio al por mayor.
-                </h3>
-                <h6>Gustavo Mendoza propietario de IntegraBits</h6>
-              </div>
-            </Slider>
-          </CarouselContainer>
-        </ServiciosContent>
-      </Comp.Width75>
     </Servicios>
+
+    <Testimonials>
+      <Comp.Width75 style={{ padding: "0rem" }}>
+        <Comp.Row mobile>
+          <Comp.Column>
+            <TestimonialLogo>
+              <img src={Logo} />
+            </TestimonialLogo>
+            <h4>
+              Indigo Translations ofrece servicios de traducción profesionales.
+            </h4>
+            <strong>Miguel Burle </strong> <br />
+            <small>Director - Indigo Translations</small>
+          </Comp.Column>
+          <Comp.Column>
+            <TestimonialLogo>
+              <img src={Logo} />
+            </TestimonialLogo>
+            <h4>
+              Indigo Translations ofrece servicios de traducción profesionales.
+            </h4>
+            <strong>Miguel Burle </strong> <br />
+            <small>Director - Indigo Translations</small>
+          </Comp.Column>
+        </Comp.Row>
+      </Comp.Width75>
+    </Testimonials>
 
     <Clientes>
       <Comp.Width75 style={{ paddingBottom: "2rem" }}>
@@ -869,14 +849,8 @@ const Clientes = styled.div`
   background: #fff;
   z-index: 1;
   position: relative;
-  padding-top: 2rem;
-
-  margin-top: -5rem;
 
   @media ${theme.breakpoint.upFromMobile} {
-    margin-top: -13rem;
-    padding-top: 7rem;
-
     p {
       font-size: 28px;
     }
@@ -897,78 +871,33 @@ const ParticleContainer = styled.div`
   }
 `;
 
-const CarouselContainer = styled.div`
-  div {
-    text-align: center;
+const Testimonials = styled.div`
+  padding: 3rem 0;
+  text-align: center;
+  position: relative;
+  color: ${theme.colors.whiteColor};
+  display: flex;
+  justify-content: space-between;
+  background: ${theme.colors.primaryColor};
+
+  h4 {
+    color: ${theme.colors.whiteColor};
   }
 
-  h3,
-  h6 {
-    color: #fff;
-    max-width: 70%;
-    margin: 1rem auto;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  > div > div > div {
+    padding: 1.5rem 3rem;
   }
+`;
 
-  .carousel-arrow {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff !important;
-
-    &:before {
-      font-size: 1rem;
-      display: block;
-      background: none;
-      padding-top: 9px;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-  }
-
-  .carousel-next {
-    right: 2rem;
-    top: 4rem;
-  }
-
-  .carousel-prev {
-    left: 2rem;
-    top: 4rem;
-  }
-
-  .carousel-next:before {
-    content: ">";
-  }
-
-  .carousel-prev:before {
-    content: "<";
-  }
-
-  @media ${theme.breakpoint.onlyMobile} {
-    h3 {
-      font-size: 1rem;
-    }
-
-    .carousel-arrow {
-      color: #000 !important;
-      background: #fff;
-      width: 2rem;
-      height: 2rem;
-
-      &:before {
-        font-size: 0.8rem;
-      }
-
-      &.carousel-next {
-        right: 1rem;
-      }
-
-      &.carousel-prev {
-        left: 1rem;
-      }
-    }
-  }
+const TestimonialLogo = styled.div`
+  background: #fff;
+  width: 6rem;
+  height: 6rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  border-radius: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
 `;

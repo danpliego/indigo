@@ -315,7 +315,7 @@ const IndexPage = () => (
           params={{
             particles: {
               number: {
-                value: 355,
+                value: 100,
                 density: {
                   enable: true,
                   value_area: 789.1476416322727
@@ -360,7 +360,7 @@ const IndexPage = () => (
                 }
               },
               line_linked: {
-                enable: false,
+                enable: true,
                 distance: 150,
                 color: "#A0B0E2",
                 opacity: 0.4,
@@ -368,7 +368,7 @@ const IndexPage = () => (
               },
               move: {
                 enable: true,
-                speed: 0.2,
+                speed: 1,
                 direction: "none",
                 random: true,
                 straight: false,
@@ -427,7 +427,7 @@ const IndexPage = () => (
       <Comp.Width75 style={{ paddingBottom: "0" }}>
         <Comp.TextCenter>
           <Comp.SectionTitle>Proceso</Comp.SectionTitle>
-          <p>
+          <p style={{ fontSize: "1.25rem" }}>
             Indigo Translations utiliza análisis de lenguaje y tecnología
             lingüística avanzada mejor conocida como CAT (Computer-assisted
             translation) e involucra a expertos en cada materia con el objetivo

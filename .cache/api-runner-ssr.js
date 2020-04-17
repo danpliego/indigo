@@ -7,6 +7,9 @@ var plugins = [{
     },{
       plugin: require('/Users/danielpliego/projects/indigo/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      plugin: require('/Users/danielpliego/projects/indigo/node_modules/gatsby-plugin-zendesk-chat/gatsby-ssr'),
+      options: {"plugins":[],"zendeskKey":"3aeaad1e-8cd4-4db0-a3fa-289ea9429978","enableDuringDevelop":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
